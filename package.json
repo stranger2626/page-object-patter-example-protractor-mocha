@@ -1,0 +1,25 @@
+{
+  "name": "page-object-pattern-example-protractor-mocha",
+  "version": "1.0.0",
+  "description": "a simple example of page objects use with protractor with ES classes",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update --versions.standalone=3.4.0",
+    "test": "protractor ./test/config/protractor.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stranger2626/page-object-pattern-example-protractor-mocha.git"
+  },
+  "author": "Matsvei Murashka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stranger2626/page-object-pattern-example-protractor-mocha/issues"
+  },
+  "homepage": "https://github.com/stranger2626/page-object-pattern-example-protractor-mocha#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "protractor": "^5.4.2"
+  }
+}
