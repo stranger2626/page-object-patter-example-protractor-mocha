@@ -1,13 +1,14 @@
 const expect = require("chai").expect;
 const HomePageClass = require("../utils/page_objects/home_page/home_page");
+const PageFactory = require("../utils/page_objects/pageFactory");
 const HomePage = new HomePageClass();
 
 describe("Home page header", function () {
 
     it("should have 6 menu items", async function () {
-        await HomePage.open();
-        await HomePage.Header.navigationButtons.clickElementByText("OUR WORK");
-        const countOfNavigationButtons = await HomePage.Header.navigationButtons.getCount();
+        await PageFactory.getPage("Home").open();
+        await PageFactory.getPage("Home").Header.navigationButtons.clickElementByText("OUR WORK");
+        const countOfNavigationButtons = await PageFactory.getPage("Home").Header.navigationButtons.getCount();
         expect(countOfNavigationButtons).to.be.equal(6);
     });
 
