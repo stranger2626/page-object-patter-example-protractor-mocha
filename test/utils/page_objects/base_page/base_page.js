@@ -6,7 +6,10 @@ class BasePage {
     };
     wait(waitInMilliseconds) {
         return browser.sleep(waitInMilliseconds);
-    }
+    };
+    getCurrenUrl() {
+        return browser.getCurrentUrl();
+    };
 };
 
 module.exports = BasePage;
