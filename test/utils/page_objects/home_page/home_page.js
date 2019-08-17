@@ -1,5 +1,5 @@
-const BasePage = require("../page_objects/base_page/base_page");
-const Element = require("../page_objects/base_elements/base_element");
+const BasePage = require("../base_page/base_page");
+const Element = require("../base_elements/base_element");
 
 class HomePage extends BasePage {
     constructor() {
