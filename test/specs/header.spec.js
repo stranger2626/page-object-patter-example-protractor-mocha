@@ -1,7 +1,5 @@
 const expect = require("chai").expect;
-const HomePageClass = require("../utils/page_objects/home_page/home_page");
 const PageFactory = require("../utils/page_objects/pageFactory");
-const HomePage = new HomePageClass();
 
 describe("Home page header", function () {
 
