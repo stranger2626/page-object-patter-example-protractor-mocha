@@ -1,2 +1,13 @@
-# page-object-patter-example-protractor-mocha
-a simple example of page objects use with protractor with ES classes
+# Requirements
+
++ Node version 8 or above
++ Java
+
+# Installation
+```
+npm install
+```
+# Run tests
+```
+npm run test
+```
