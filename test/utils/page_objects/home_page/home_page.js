@@ -7,7 +7,7 @@ class HomePage extends BasePage {
       this.sections = new Element("div.section:not(.header)");  
     };
     open() {
-        return browser.get("https://www.epam.com");
+        return super.open("https://www.epam.com");
     };
 };
 

@@ -7,7 +7,7 @@ class OurWorkPage extends BasePage {
       this.ourWorkTitle = new Element(".title--mixed-case.color-almost-black");  
     };
     open() {
-        return browser.get("https://www.epam.com/our-work");
+        return super.open("https://www.epam.com/our-work");
     };
 };
 

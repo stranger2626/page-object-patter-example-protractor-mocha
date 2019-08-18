@@ -10,6 +10,9 @@ class BasePage {
     getCurrenUrl() {
         return browser.getCurrentUrl();
     };
+    open(url) {
+        return browser.get(url);
+    };
 };
 
 module.exports = BasePage;
