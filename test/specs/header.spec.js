@@ -3,6 +3,11 @@ const PageFactory = require("../utils/page_objects/pageFactory");
 
 describe("Home page header", function () {
 
+    beforeEach(function() {
+            browser.ignoreSynchronization = true;
+            return browser.manage().window().maximize();
+    });
+
     it("should have 6 menu items", async function () {
         await PageFactory.getPage("Home").open();
         await PageFactory.getPage("Home").Header.navigationButtons.clickElementByText("OUR WORK");

@@ -1,5 +1,7 @@
 exports.config = {
 
+    restartBrowserBetweenTests: true,
+
     directConnect: true,
 
     framework: 'mocha',
@@ -17,10 +19,5 @@ exports.config = {
     mochaOpts: {
         reporter: 'spec',
         timeout: 70000
-    },
-
-    onPrepare: () => {
-        browser.ignoreSynchronization = true;
-        browser.manage().window().maximize();
     }
 };
