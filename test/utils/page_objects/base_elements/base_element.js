@@ -1,12 +1,17 @@
+const logger = require('../../../config/logger.config');
 class Element {
-    constructor(selector) {
+    constructor(elementName, selector) {
         this.element = element(by.css(selector));
+        this.elementName = elementName;
     }
     click() {
+        logger.info(`Clicking "${this.elementName}"`);
         return this.element.click();
     };
-    getText() {
-        return this.element.getText();
+    async getText() {
+        const elementText = await this.element.getText();
+        logger.info(`"${this.elementName}" element text is ${elementText}`);
+        return elementText;
     };
 };
 

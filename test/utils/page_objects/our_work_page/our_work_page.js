@@ -1,13 +1,15 @@
+const logger = require("../../../config/logger.config");
 const BasePage = require("../base_page/base_page");
 const Element = require("../base_elements/base_element");
 
 class OurWorkPage extends BasePage {
     constructor() {
       super();
-      this.ourWorkTitle = new Element(".title--mixed-case.color-almost-black");  
+      this.url = "https://www.epam.com/our-work";
+      this.ourWorkTitle = new Element("Our Work Title", ".title--mixed-case.color-almost-black");  
     };
     open() {
-        return super.open("https://www.epam.com/our-work");
+      return super.open(this.url);
     };
 };
 
