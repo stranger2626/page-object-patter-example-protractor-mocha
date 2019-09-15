@@ -7,7 +7,7 @@
     "remove-logs": "node ./test/utils/cleanup/logsCleaner.js",
     "postinstall": "webdriver-manager update --versions.standalone=3.4.0",
     "pretest": "npm run remove-logs",
-    "test": "protractor ./test/config/protractor.config.js"
+    "test": "protractor ./test/config/protractor.config.js --disableChecks"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "fs-extra": "^8.1.0",
     "mocha": "^6.2.0",
     "protractor": "^5.4.2",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "yargs": "^14.0.0"
   }
 }
