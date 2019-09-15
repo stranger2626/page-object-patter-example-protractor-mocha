@@ -7,9 +7,9 @@ class Header {
         this.navigationButtons = new Collection("Navigation Buttons", "div.header .top-navigation__item");
         this.contactUsButton = new Element("Contact Us Button", ".cta-button-ui");
     };
-    async clickContacktUs(){
+    clickContacktUs(){
         logger.info(`Clicking "Contact Us Button"`);
-        return await this.contactUsButton.click();
+        return this.contactUsButton.click();
     };
 };
 
