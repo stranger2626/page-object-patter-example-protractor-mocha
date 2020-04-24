@@ -11,7 +11,8 @@ describe("Home page header", function () {
     it("should have 6 menu items", async function () {
         await PageFactory.getPage("Home").open();
         await PageFactory.getPage("Home").Header.navigationButtons.clickElementByText("OUR WORK");
-        await browser.sleep(3000);
+        const firstNavigationButton = PageFactory.getPage("Home").Header.navigationButtons.collection.get(0);
+        await browser.wait(EC.elementToBeClickable(firstNavigationButton), 10000);
         const countOfNavigationButtons = await PageFactory.getPage("Home").Header.navigationButtons.getCount();
         expect(countOfNavigationButtons).to.be.equal(6);
     });
@@ -21,8 +22,10 @@ describe("Home page header", function () {
         await browser.get("https://www.epam.com");
         const arrayOfelementsTexts = await element.all(by.css("div.header .top-navigation__item")).getText();
         const elementToClickIndex = arrayOfelementsTexts.indexOf("OUR WORK");
-        elementToClick = element.all(by.css("div.header .top-navigation__item")).get(elementToClickIndex);
+        const elementToClick = element.all(by.css("div.header .top-navigation__item")).get(elementToClickIndex);
         await elementToClick.click();
+        const firstNavigationButton = element.all(by.css("div.header .top-navigation__item")).get(0);
+        await browser.wait(EC.elementToBeClickable(firstNavigationButton), 10000);
         const countOfNavigationButtons = await element.all(by.css("div.header .top-navigation__item")).count();
         expect(countOfNavigationButtons).to.be.equal(6);
     });
